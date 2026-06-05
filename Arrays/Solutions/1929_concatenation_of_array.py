@@ -19,8 +19,24 @@ Examples:
 
 from typing import List
 
+class Solution(object):
+    def getConcatenation(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        n = len(nums)
+        ans = [0] * (2 * n)  # creates list of 2n zeros
+        for i in range(n):
+            ans[i] = nums[i]
+            ans[i + n] = nums[i]
 
-class Solution:
-    def getConcatenation(self, nums: List[int]) -> List[int]:
-        # Your solution here
-        pass
+        return ans
+
+    def getConcatenation(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        ans = nums + nums
+        return ans       
